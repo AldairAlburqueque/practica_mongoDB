@@ -1,0 +1,25 @@
+//creamos la base de datos
+use("ClothingStore")
+
+//insercion masiva de documentos en coleccion clientes
+db.clientes.insertMany([
+    {
+        _id: "C001",
+        nombre: "Juan",
+        apellido: "Pérez",
+        fecha_nacimiento: "15/05/1990",
+        email: "juan.perez@gmail.com",
+        categorias: ['Ropa Formal', 'Camisas', 'Hombres']
+    },
+    {
+        _id: "C002",
+        nombre: "Ana",
+        apellido: "Gómez",
+        fecha_nacimiento: "",
+        email: "ana.gomez@outlook.co",
+        categorias: ['Ropa Casual', 'Vestidos', 'Mujeres', 'Accesorios']
+    }
+])
+
+
+db.clientes.find()

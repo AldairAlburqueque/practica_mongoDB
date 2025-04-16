@@ -1,0 +1,17 @@
+//creamos la base de datos
+use("ClothingStore")
+
+//crear una coleccion prendas
+db.prenda.insertOne(
+    {
+        nombre: "Camisa Forma",
+        marca: "H&M",
+        categorias: ["Ropa Formal", "Camisas", "Hombres"],
+        stock: 50,
+        precio_unitario: 35.50
+    }
+)
+
+//listar documentos
+db.prenda.find()
+
