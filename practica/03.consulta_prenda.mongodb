@@ -1,4 +1,0 @@
-use("ClothingStore")
-
-//listar los 3 primeros elementos de prendas
-db.prenda.find().limit(3);
