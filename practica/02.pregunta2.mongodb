@@ -1,0 +1,22 @@
+use("dbClothingStore")
+
+//2.1.listar los 3 primeros elementos de prendas
+db.prenda.find().limit(3);
+
+//2.2. Listar los 2 primeros documentos de clientes
+db.clientes.find().limit(2)
+
+//2.3. Listar solamente los atributos:
+// nombre, apellido, correo y categorías de interés de los cliente
+db.clientes.find(
+    {},
+    {nombre:1, apellido:1, correo:1, categorias:1}
+)
+
+//2.4. Listar las prendas cuya cantidad de stock sea igual o mayor que 50
+db.prenda.find(
+    { 
+        //mayor e igual que
+        "stock": { $gte: 50 } 
+    }
+   )
