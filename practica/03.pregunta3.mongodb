@@ -1,0 +1,36 @@
+use("dbClothingStore")   
+
+//Utilizando la colección prendas:
+//3·1. Actualice el nombre del Vestido de Verano por Vestido Elegante
+
+db.prenda.updateOne(
+    {nombre: "Vestido de Verano"},
+    {
+        $set: {nombre: "Vestido Elegante"}
+    }
+)
+
+//2.2· Actualice el precio de la Casaca de cuero de 299 a 799.
+db.prenda.updateOne(
+    {nombre: "Casaca de Cuero"},
+    {
+        $set: {precio_unitario: 799}
+    }
+)
+
+//Utilizando la colección clientes:
+//3.3· Actualice la fecha de nacimiento de Ana Gómez por 06/06/2006
+db.clientes.updateOne(
+    {nombre: "Ana", apellido: "Gómez"},
+    {
+        $set: {fecha_nacimiento: "06/06/2006"}
+    }
+)
+
+//3.4 Actualice el número de email de Juan Pérez por: juan.pe@yahoo.com
+db.clientes.updateOne(
+    {nombre: "Juan", apellido: "Pérez"},
+    {
+        $set: {email: "juan.pe@yahoo.com"}
+    }
+)
